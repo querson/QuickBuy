@@ -11,6 +11,7 @@ namespace QuickBuy.Dominio.Entidades
         public int Id { get; set; }
         public DateTime DataPedido { get; set; }
         public int UsuarioId { get; set; }
+        public virtual Usuario Usuario { get; set; } /*colocado devido a ter uma colection com o usuario*/
         public DateTime DataPrevisaoEntrega { get; set; }
 
         //para facilitar os campos abaixo foram colocado na mesma classe para facilitar porém poderia estar em outra classe
