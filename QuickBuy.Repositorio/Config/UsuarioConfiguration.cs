@@ -17,29 +17,32 @@ namespace QuickBuy.Repositorio.Config
             builder
                 .Property(u => u.Email)
                 .IsRequired()
-                .HasMaxLength(50)
-                .HasColumnType("varchar");
+                .HasMaxLength(50);
+                //.HasColumnType("varchar");
 
 
             builder
                 .Property(u => u.Senha)
                 .IsRequired()
                 .HasMaxLength(400);
-    
+
             builder
                 .Property(u => u.Nome)
-                .IsRequired()
-                .HasMaxLength(50)
-                .HasColumnType("varchar");
+                .IsRequired();
+           //     .HasColumnType("varchar");
 
             builder
                 .Property(u => u.SobreNome)
                 .IsRequired()
-                .HasMaxLength(50)
-                .HasColumnType("varchar");
+                .HasMaxLength(50);
+               // .HasColumnType("varchar");
 
             /*  builder
                 .Property(u => u.Pedidos)*/
+
+            builder
+                .HasMany(u => u.Pedidos) /*how i put the HasMany here, this give me acess to Pedido table*/
+                .WithOne(p => p.Usuario); /*the order just will have one usuario*/
 
 
         }
