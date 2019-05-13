@@ -6,7 +6,9 @@ using Microsoft.AspNetCore.SpaServices.AngularCli;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using QuickBuy.Dominio.Contratos;
 using QuickBuy.Repositorio.Contexto;
+using QuickBuy.Repositorio.Repositorios;
 
 namespace QuickBuy.Web
 {
@@ -34,6 +36,9 @@ namespace QuickBuy.Web
                                     .UseMySql(connectionString, m => m.MigrationsAssembly("QuickBuy.Repositorio")));
 
             /* o comando a uselazy... acima PERMITE FAZER O RELACIONAMENTO AUTOMATICO*/
+
+
+            services.AddScoped<IProdutoRepositorio, ProdutoRepositorio>();
 
             // In production, the Angular files will be served from this directory
             services.AddSpaStaticFiles(configuration =>
@@ -76,7 +81,9 @@ namespace QuickBuy.Web
 
                 if (env.IsDevelopment())
                 {
-                    spa.UseAngularCliServer(npmScript: "start");
+                   // spa.UseAngularCliServer(npmScript: "start");
+
+                    spa.UseAngularCliServer("http://localhost:4200/");
                 }
             });
         }

@@ -6,11 +6,10 @@ using System.Text;
 
 namespace QuickBuy.Repositorio.Repositorios
 {
-    public class UsuarioRepositorio : BaseRepositorio<Usuario>, IUsuarioRepositorio
+   public class UsuarioRepositorio : BaseRepositorio<Usuario>, IUsuarioRepositorio
     {
-        public UsuarioRepositorio()
+       public UsuarioRepositorio()
         {
 
         }
     }
-}
