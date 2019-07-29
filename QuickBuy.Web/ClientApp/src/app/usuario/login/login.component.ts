@@ -15,6 +15,8 @@ export class LoginComponent {
   public titulo = "Titulo adicionado no componente"*/
 
   public usuario;
+  public usuarioAutenticado: boolean;
+
   constructor() {
     this.usuario = new Usuario();
   }
@@ -24,7 +26,9 @@ export class LoginComponent {
   public senha2 = "";
 
   entrar() {
-    alert(this.email + " - " + this.senha2);
+    if (this.usuario.email == "abel@abel.com" && this.usuario.senha == "abc123") {
+      this.usuarioAutenticado = true;
+    }
   }
 
 
