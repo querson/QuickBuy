@@ -18,7 +18,13 @@
         <div class="alert alert-primary" role="alert" *ngIf="usuarioAutenticado" >
           Usuario Autenticado !
         </div>
-   
-    {{ senha }}
-  </form>
+
+         <div class="alert alert-warning" role="alert"
+           <div *ngfor="let us of usuarios">
+             {{ us }}
+           <div>
+         </div>
+
+             {{ senha }}
+</form>
 </div>
