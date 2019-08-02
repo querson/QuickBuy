@@ -15,8 +15,8 @@ export class LoginComponent {
   public titulo = "Titulo adicionado no componente"*/
 
   public usuario;
-  public usuarioAutenticado: boolean;
-  public usuarios = ["usuario1","usuario2","usuario3","usuario4","usuario5"]
+  /*public usuarioAutenticado: boolean;
+  public usuarios = ["usuario1","usuario2","usuario3","usuario4","usuario5"]*/
 
 
 
@@ -30,7 +30,7 @@ export class LoginComponent {
 
   entrar() {
     if (this.usuario.email == "abel@abel.com" && this.usuario.senha == "abc123") {
-      this.usuarioAutenticado = true;
+     /* this.usuarioAutenticado = true;*/
     }
   }
 
@@ -38,10 +38,10 @@ export class LoginComponent {
 
 
 
-    /*  on_keypress() {
-        alert('foi digitado no campo email');
-      }
-      */
-  }
+   /*  on_keypress() {
+       alert('foi digitado no campo email');
+      }*/
+      
+  
 
 }
