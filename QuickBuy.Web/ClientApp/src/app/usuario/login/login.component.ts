@@ -29,12 +29,12 @@ export class LoginComponent {
 
   entrar() {
     if (this.usuario.email == "abel@abel.com" && this.usuario.senha == "abc123") {
-      localStorage.setItem("usuario-autenticado", "1");
+      sessionStorage.setItem("usuario-autenticado", "1");
       this.router.navigate(['/']);
      /* this.usuarioAutenticado = true;*/
     }
   }
-
+   
 
 
 
