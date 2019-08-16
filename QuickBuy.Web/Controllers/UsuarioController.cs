@@ -6,6 +6,7 @@ using System;
 
 namespace QuickBuy.Web.Controllers
 {
+    [Route("api/[Controller]")]
     public class UsuarioController : Controller
     {
 

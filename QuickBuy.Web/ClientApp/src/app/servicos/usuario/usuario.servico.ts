@@ -23,7 +23,7 @@ export class UsuarioServico {
       senha: usuario.senha
     }
     //return this.http.post<Usuario>("http://localhost:8080/api/usuario", body, { headers });
-    return this.http.post<Usuario>(this.baseURL + "api/usuario", body, { headers });
+    return this.http.post<Usuario>(this.baseURL + "api/usuario/verificarUsuario", body, { headers });
   }
 
 }
