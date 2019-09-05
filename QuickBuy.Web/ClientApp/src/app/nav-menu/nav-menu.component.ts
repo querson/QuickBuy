@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+
 import { Router } from '@angular/router';
 import { UsuarioServico } from '../servicos/usuario/usuario.servico';
 
@@ -7,14 +8,13 @@ import { UsuarioServico } from '../servicos/usuario/usuario.servico';
   templateUrl: './nav-menu.component.html',
   styleUrls: ['./nav-menu.component.css']
 })
+export class NavMenuComponent implements OnInit {
 
-
-export class NavMenuComponent {
   isExpanded = false;
 
-  constructor(private router: Router, private usuarioServico: UsuarioServico) {
+  //constructor(private router: Router, private usuarioServico: UsuarioServico) {
 
-  }
+  //}
 
 
   collapse() {
@@ -25,20 +25,17 @@ export class NavMenuComponent {
     this.isExpanded = !this.isExpanded;
   }
 
-  public usuarioLogado(): boolean {
-   /* var usuarioLogado = sessionStorage.getItem("usuario-autenticado");
-    if (usuarioLogado == "1") {
-      return true;
-    }
-    return false;*/
-    return this.usuarioServico.usuario_autenticado();
-  }
 
-  sair() {
-    //sessionStorage.setItem("usuario-autenticado", "");
-    this.usuarioServico.limpar_sessao();
-    this.router.navigate(['/']);
-  }
+  ////public usuarioLogado(): boolean {
+  ////  /* var usuarioLogado = sessionStorage.getItem("usuario-autenticado");
+  ////   if (usuarioLogado == "1") {
+  ////     return true;
+  ////   }
+  ////   return false;*/
+  ////  return this.usuarioServico.usuario_autenticado();
+  ////}
 
+  ngOnInit() {
+  }
 
 }

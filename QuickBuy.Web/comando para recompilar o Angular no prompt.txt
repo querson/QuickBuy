@@ -1,6 +1,6 @@
 ﻿npm i @angular-devkit/build-angular
 
-
+ng update @angular/cli @angular/core --force
 
 npm uninstall angular-cli
 npm install @angular/cli --save-dev
